@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palavah Music Blog</title>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Manrope:wght@300;400;500&family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+}
+
+.logo {
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.8rem;
+  line-height: 6rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+
+h2 {
+  margin: 4rem 0 1.2rem 0;
+}
+
+p,
+.text {
+  line-height: 200%;
+  font-size: 1.6rem;
+}
+
+.text--size-md {
+  font-size: 1.4rem;
+}
+
+.text--size-sm,
+.tag,
+figcaption {
+  font-size: 1.1rem;
+}
+
+q {
+  display: block;
+  color: #6666ff;
+  padding: 2.4rem 2rem;
+  margin: 2.4rem 0.8rem;
+  background: #f2f2f2;
+  border-left: 0.3rem solid;
+}
+
+img,
+button {
+  display: block;
+}
+
+.logo,
+.menu-item,
+.tag {
+  color: inherit;
+  text-decoration: none;
+}
+
+figure {
+  display: block;
+  width: 100%; /* Hmm */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items; center;
+  margin: 0.8rem 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+.wrapper-outer {
+  width: 100%;
+}
+
+.wrapper-inner {
+  width: 90%;
+  max-width: 90rem;
+  margin: auto;
+  padding: 2.4rem 0;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-items,
+.site-actions,
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.menu-items{
+  list-style: none;
+  text-transform: uppercase;
+  gap: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+}
+
+article.main-article {
+  display: flex;
+  flex-direction: column;
+}
+
+.article_header {
+  order: 1;
+}
+
+.main-image {
+  order: 2;
+}
+
+.article-text {
+  order: 3;
+}
+
+.article-meta {
+  gap: 1.6rem;
+  padding: 1.6rem 0;
+  flex-wrap: no-wrap;
+}
+
+aside.related {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.related-articles {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.6rem;
+}
+
+.related-article {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.related-article:hover {
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.related-article img {
+  object-fit: cover;
+  max-height: 27rem;
+}
+
+.related-article h2,
+.related-article p {
+	padding: 0 1.6rem;
+}
+
+.related-article h2 {
+  margin-top: 1.6rem;
+}
+
+.wrapper-header {
+  box-shadow: inset 0 -0.1rem var(--grey);
+}
+
+.tag {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  border: 0.1rem solid #f2f2f2;
+  padding: 0 0.8rem;
+}
+
+.avatar {
+  width: 3.6rem;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 60rem) {
+	article.main-article {
+		display: block;
+	}
+	.main-image {
+		display: block;
+		float: right;
+		margin-bottom: 2rem;
+		margin-left: 4rem;
+		width: 40%;
+		z-index: 20;
+	}
+	.article_header,
+	.article-text {
+		width: 80%;
+	}
+	.article-text {
+		margin-top: calc(2 * var(--padding-md));
+	}
+	.test {
+		display: sticky;
+		float: right;
+		right: 0;
+		top: 0;
+		//bottom: 10rem;
+	}
+}
+
+
+</style>
+    </head>
+    <body>
+        <div class="wrapper-outer wrapper-header">
+            <header class="site_header wrapper-inner">
+              <a href="" title="logo" class="logo">Palavah Music</a>
+              <nav class="menu">
+                <ul class="menu-items">
+                  <li><a href="" class="menu-item">About Me</a></li>
+                  <li><a href="" class="menu-item">Blog</a></li>
+                  <li><a href="" class="menu-item">Shop</a></li>
+                  <li><a href="" class="menu-item">Contact</li></a>
+                </ul>
+              </nav>
+            <div class="site-actions">
+              <i class="fas fa-search"></i>
+            </div>
+            </header>
+          </div>
+          <div class="wrapper-outer wrapper-article">
+            <article class="wrapper-inner main-article">
+              <figure class="main-image">
+                <img src="https://i.pinimg.com/564x/73/3e/db/733edb3e0b1676b663c2c10b80219b63.jpg" alt="The Weeknd poses for GQ"/>
+                <figcaption>The Weeknd Poses For GQ</figcaption>
+              </figure>
+              <header class="article_header">
+                <section class="article-tags">
+                  <a class="tag" rel="tag" href="">Music</a>
+                  <a class="tag" rel="tag" href="">The Weeknd</a>
+                  <a class="tag" rel="tag" href="">Featured</a>
+                </section>
+                <h1 class="article_title">The Weeknd Is The Biggest Pop Star Right Now</h1>
+                <p class="article-subhead">
+                  <i>Abel Tesfaye's biggest hit, "Blinding Lights" has been crowned as the greatest song on Billboard Hot 100's list. The singer now prepares for his next album, The Dawn.</i></p>
+                <div class="article-meta">
+                  <img class="avatar" src="https://secure.gravatar.com/avatar/d8bd38f51ddf3bdea669c07121b8f5f8?s=500&d=mm&r=g" alt="E-BENNY for Palavah" />
+                  <p class="byline">
+                    <span>E-BENNY</span> | <time class="text--size-sm" datetime="2021-11-30">November 30, 2021</time> <span>|<span class="text--size-sm">7 min read</span></p>
+                </div>
+              </header>
+              <main class="article-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Vitae auctor eu augue ut lectus arcu bibendum at. Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Lectus quam id leo in vitae turpis massa sed elementum. Non blandit massa enim nec dui nunc. Pellentesque habitant morbi tristique senectus et netus. Sed turpis tincidunt id aliquet risus feugiat in. Luctus accumsan tortor posuere ac ut consequat semper viverra. Urna nec tincidunt praesent semper. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Proin fermentum leo vel orci. Tristique senectus et netus et malesuada fames. Et odio pellentesque diam volutpat commodo sed egestas egestas. Non tellus orci ac auctor augue mauris augue. Viverra suspendisse potenti nullam ac tortor vitae purus. Magna etiam tempor orci eu lobortis elementum. Ipsum consequat nisl vel pretium lectus quam id leo. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Gravida arcu ac tortor dignissim convallis aenean et tortor. Non enim praesent elementum facilisis leo vel.</p>
+                <q><i>A condimentum vitae sapien pellentesque habitant. Morbi tincidunt augue interdum velit euismod in pellentesque massa.</q></i>
+                <p>Libero justo laoreet sit amet. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Elementum integer enim neque volutpat ac tincidunt vitae. Vulputate enim nulla aliquet porttitor lacus luctus. Bibendum est ultricies integer quis auctor elit sed. Lacus luctus accumsan tortor posuere ac ut. Elementum curabitur vitae nunc sed velit. Ac odio tempor orci dapibus. Ultricies leo integer malesuada nunc vel risus commodo. Sagittis aliquam malesuada bibendum arcu vitae. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Aenean et tortor at risus viverra adipiscing at in tellus. Lectus quam id leo in vitae turpis massa sed elementum. Quam id leo in vitae turpis massa sed. Amet nisl suscipit adipiscing bibendum est ultricies integer. Vestibulum lorem sed risus ultricies tristique. Natoque penatibus et magnis dis parturient montes nascetur.</p>
+                <p>Libero justo laoreet sit amet. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Elementum integer enim neque volutpat ac tincidunt vitae. Vulputate enim nulla aliquet porttitor lacus luctus. Bibendum est ultricies integer quis auctor elit sed. Lacus luctus accumsan tortor posuere ac ut. Elementum curabitur vitae nunc sed velit. Ac odio tempor orci dapibus. Ultricies leo integer malesuada nunc vel risus commodo. Sagittis aliquam malesuada bibendum arcu vitae. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Aenean et tortor at risus viverra adipiscing at in tellus. Lectus quam id leo in vitae turpis massa sed elementum. Quam id leo in vitae turpis massa sed. Amet nisl suscipit adipiscing bibendum est ultricies integer. Vestibulum lorem sed risus ultricies tristique. Natoque penatibus et magnis dis parturient montes nascetur.</p>
+                <h2>The Impact On The Charts</h2>
+                <p>Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Elementum nibh tellus molestie nunc non blandit massa. Nec tincidunt praesent semper feugiat nibh sed pulvinar. Ante metus dictum at tempor commodo ullamcorper. Ligula ullamcorper malesuada proin libero. Dui faucibus in ornare quam viverra orci. Tellus at urna condimentum mattis pellentesque id nibh tortor id. Ornare lectus sit amet est placerat in egestas erat. Mi bibendum neque egestas congue quisque egestas. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Odio pellentesque diam volutpat commodo sed egestas. Nascetur ridiculus mus mauris vitae ultricies leo. Duis convallis convallis tellus id interdum velit laoreet.</p>
+                <figure><img src="https://i.pinimg.com/564x/c6/3d/21/c63d216af808ac566e2ac21fba6b18c1.jpg" alt="The Weeknd" />
+                  <figcaption>The Weeknd Poses For GQ</figcaption>
+                </figure>
+                <p>Non tellus orci ac auctor. Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Erat velit scelerisque in dictum. Dictum varius duis at consectetur lorem donec massa sapien faucibus. Ligula ullamcorper malesuada proin libero nunc consequat interdum. Dictum at tempor commodo ullamcorper a lacus vestibulum sed arcu. Blandit aliquam etiam erat velit scelerisque in dictum. Diam in arcu cursus euismod quis viverra nibh cras. Platea dictumst quisque sagittis purus sit amet volutpat consequat. Lorem sed risus ultricies tristique nulla aliquet enim tortor.</p>
+                <h2>His Inspirations</h2>
+                <p>Tellus molestie nunc non blandit massa enim nec. Neque gravida in fermentum et. In hac habitasse platea dictumst quisque sagittis purus sit. Non enim praesent elementum facilisis leo vel.</p>
+                <figure><img src="https://i.pinimg.com/564x/97/e4/03/97e403b0f8b6e71988998840a9f90d74.jpg" alt="The Weeknd"/>
+                  <figcaption>The Weeknd's Photoshoot for After Hours</figcaption>
+                </figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla facilisi etiam dignissim diam quis. Feugiat nisl pretium fusce id velit ut tortor pretium viverra. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Sed felis eget velit aliquet sagittis id. Lorem ipsum dolor sit amet. Amet facilisis magna etiam tempor orci. Pretium fusce id velit ut. Arcu dictum varius duis at consectetur. Sem integer vitae justo eget magna fermentum iaculis eu non. Nunc mattis enim ut tellus elementum sagittis vitae et. Lacus sed turpis tincidunt id.</p>
+                <h2>His Next Project</h2>
+                <p>Vitae auctor eu augue ut lectus arcu bibendum at. Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Lectus quam id leo in vitae turpis massa sed elementum. Non blandit massa enim nec dui nunc. Pellentesque habitant morbi tristique senectus et netus. Sed turpis tincidunt id aliquet risus feugiat in. Luctus accumsan tortor posuere ac ut consequat semper viverra. Urna nec tincidunt praesent semper.</p>
+                <figure><img src="https://i.pinimg.com/564x/82/d9/4f/82d94fb2c1a0f7c05a8e670c5881b804.jpg" alt="The Weeknd"/>
+                  <figcaption>The Weeknd</figcaption>
+                </figure>
+                <p>Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Proin fermentum leo vel orci. Tristique senectus et netus et malesuada fames. Et odio pellentesque diam volutpat commodo sed egestas egestas. Non tellus orci ac auctor augue mauris augue. Viverra suspendisse potenti nullam ac tortor vitae purus. Magna etiam tempor orci eu lobortis elementum. Ipsum consequat nisl vel pretium lectus quam id leo. Ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Gravida arcu ac tortor dignissim convallis aenean et tortor. Non enim praesent elementum facilisis leo vel.</p>
+                <q><i>A condimentum vitae sapien pellentesque habitant. Morbi tincidunt augue interdum velit euismod in pellentesque massa. Libero justo laoreet sit amet. Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Elementum integer enim neque volutpat ac tincidunt vitae.</q></i>
+                <p>Vulputate enim nulla aliquet porttitor lacus luctus. Bibendum est ultricies integer quis auctor elit sed. Lacus luctus accumsan tortor posuere ac ut. Elementum curabitur vitae nunc sed velit. Ac odio tempor orci dapibus. Ultricies leo integer malesuada nunc vel risus commodo. Sagittis aliquam malesuada bibendum arcu vitae. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Aenean et tortor at risus viverra adipiscing at in tellus. </p>
+              </main>
+            </article>
+          </div>
+          <div class="wrapper-outer wrapper-article">
+            <aside class="wrapper-inner related">
+              <h2>Related Articles</h2>
+              <div class="related-articles">
+                <a class="related-article">
+                  <img src="https://i.pinimg.com/564x/f4/6a/2b/f46a2be942d8b7f5cee9eebd5adc7009.jpg" alt="A$AP Rocky Performing"/>
+                  <h2>The Impact of A$AP Rocky</h2>
+                  <p class="text--size-md">Lord Flacko's psychedelic approach has forever changed the rap game.</p>
+                </a>
+                <a class="related-article">
+                  <img src="https://i.pinimg.com/564x/95/1c/2f/951c2fa4567cb0a3b4fc884c23d0b930.jpg" alt=""/>
+                  <h2>IGOR Revisited</h2>
+                  <p class="text--size-md">Here, we analyze Tyler's Grammy-winning album.</p>
+                </a>
+                <a class="related-article">
+                  <img src="https://i.pinimg.com/564x/b1/6e/9d/b16e9d23847cf74433ba5f610a2c1bae.jpg" alt="Rihanna"/>
+                  <h2>Rihanna's Business Acumen Is Top Notch</h2>
+                  <p class="text--size-md">The Bajan singer's FENTY brand is now worth a billion dollars.</p>
+                </a>
+              </div>
+            </aside>
+          </div>  
+    </body>
+</html>
